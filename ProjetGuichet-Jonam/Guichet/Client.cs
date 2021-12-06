@@ -11,6 +11,7 @@ namespace Guichet
         private bool actif;
         private CompteClient compteEpargne;
         private CompteClient compteCheque;
+        private int nombreLoginInvalide;
 
 
         public Client(string nomClient, string nipClient,CompteClient compteEpargne, CompteClient compteCheque)
@@ -18,12 +19,14 @@ namespace Guichet
             this.nomClient = nomClient;
             this.nipClient = nipClient;
             this.actif = true;
-            this.compteEpargne = compteEpargne;
-            this.compteCheque = compteCheque;
+            this.CompteEpargne = compteEpargne;
+            this.CompteCheque = compteCheque;
+            this.NombreLoginInvalide = 0;
         }
 
         public string NomClient { get => nomClient; set => nomClient = value; }
         public string NipClient { get => nipClient; set => nipClient = value; }
+        public int NombreLoginInvalide { get => nombreLoginInvalide; set => nombreLoginInvalide = value; }
 
         public void VerrouillerCompte()
         {
@@ -39,6 +42,9 @@ namespace Guichet
         {
             return this.actif;
         }
-        //public bool Actif { get => actif; set => actif = value; }
+       public bool Actif { get => actif; set => actif = value; }
+        public CompteClient CompteEpargne { get => compteEpargne; set => compteEpargne = value; }
+        public CompteClient CompteCheque { get => compteCheque; set => compteCheque = value; }
+
     }
 }

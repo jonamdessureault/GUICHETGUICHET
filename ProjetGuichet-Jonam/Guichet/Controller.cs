@@ -7,7 +7,7 @@ namespace Guichet
     {
         static void Main(string[] args)
         {
-    
+            //une fonction static permet d'utiliser une fonction sans avoir à instancier un objet (pas besoin de mettre Chien myDog = new Chien(); -> myDog.fonction, on peut faire directement Chien.fonction)
             CompteEpargne compteEpargneJonam = new CompteEpargne("00000001",  400);
             CompteCheque compteChequeJonam = new CompteCheque("00000001",  401);
             Client Jonam = new Client("JonamDes", "1234", compteEpargneJonam, compteChequeJonam);
@@ -39,7 +39,8 @@ namespace Guichet
             
 
             Guichet guichet = new Guichet(Clients);
-            guichet.MenuPrincipal();
+            guichet.runMenu();
+            
         }
     }
 }

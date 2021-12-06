@@ -7,13 +7,15 @@ namespace Guichet
     public abstract class CompteClient
     {
         private string numerocompte;
-        private int solde;
+        private decimal soldeCompte;
 
         public string Numerocompte { get => numerocompte; set => numerocompte = value; }
-        public int Solde { get => solde; set => solde = value; }
-        public CompteClient(string numerocompte, int solde)
+        public decimal SoldeCompte { get => soldeCompte; set => soldeCompte = value; }
+        public CompteClient(string numerocompte, decimal soldeCompte)
         {
 
         }
+
+
     }
 }

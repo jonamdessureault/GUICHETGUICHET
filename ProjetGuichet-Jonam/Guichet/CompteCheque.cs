@@ -6,10 +6,10 @@ namespace Guichet
 {    
     class CompteCheque : CompteClient
     {
-        public CompteCheque(string numerocompte, int solde) : base(numerocompte, solde)
+        public CompteCheque(string numerocompte, decimal soldeCompte) : base(numerocompte, soldeCompte)
         {
             this.Numerocompte = numerocompte;
-            this.Solde = solde;
-        }
+            this.SoldeCompte = soldeCompte;
+        } 
     }
 }
